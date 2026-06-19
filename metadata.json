@@ -1,0 +1,8 @@
+{
+  "name": "Remix:  Cosmological Dynamics Paper",
+  "description": "A beautiful academic reader for the Self-Referential Information-Geometric Framework for Cosmological Dynamics paper.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

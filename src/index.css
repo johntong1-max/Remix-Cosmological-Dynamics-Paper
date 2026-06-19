@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap");
+@import "tailwindcss";
+
+@layer utilities {
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 3px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #475569;
+  }
+}
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+body {
+  @apply bg-slate-950 text-slate-300 font-sans antialiased selection:bg-indigo-500/30 selection:text-indigo-200;
+}
+
+/* Custom scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Markdown Styles */
+.markdown-body {
+  @apply text-slate-300 leading-relaxed font-serif text-lg;
+}
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3 {
+  @apply font-sans text-slate-100 font-semibold tracking-tight;
+}
+.markdown-body h2 {
+  @apply text-2xl mt-12 mb-6 border-b border-slate-800 pb-2 flex items-center gap-3;
+}
+.markdown-body h3 {
+  @apply text-xl mt-8 mb-4;
+}
+.markdown-body p {
+  @apply mb-6;
+}
+.markdown-body ul {
+  @apply list-disc list-outside ml-6 mb-6;
+}
+.markdown-body li {
+  @apply mb-2;
+}
+.markdown-body .katex-display {
+  @apply my-8 overflow-x-auto overflow-y-hidden py-4 px-6 bg-slate-900/50 rounded-xl border border-slate-800/50 text-indigo-100;
+}
+.markdown-body a {
+  @apply text-indigo-400 hover:text-indigo-300 underline underline-offset-4 decoration-indigo-400/30 hover:decoration-indigo-400 transition-colors;
+}
+.markdown-body img {
+  @apply max-w-full h-auto rounded-xl border border-slate-800 shadow-lg my-8;
+}
